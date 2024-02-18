@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  zookeper:run: 
+    - helm upgrade --install --values=./helm/values-override.yaml zookeeper oci://registry-1.docker.io/bitnamicharts/zookeeper
+  minikube:run: minikube start
+  run:
+    - task: minikube:run
+    - task: zookeper:run

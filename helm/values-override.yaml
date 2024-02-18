@@ -1,0 +1,8 @@
+auth:
+  client:
+    enabled: false
+replicaCount: 1
+persistence:
+  enabled: true
+image:
+  tag: 3.9.1-debian-11-r8
